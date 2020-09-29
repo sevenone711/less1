@@ -50,4 +50,13 @@ public class lesson1 {
                 System.out.println(a + " отрицательное число!");
         }
     }
+
+    /*Написать метод, которому в качестве параметра передается целое число,
+    метод должен вернуть true,
+    если число отрицательное;
+    * */
+
+    public static boolean isNegative(int a){
+        return a < 0;
+    }
 }
