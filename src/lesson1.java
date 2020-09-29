@@ -1,3 +1,4 @@
+import com.sun.tools.javac.file.SymbolArchive;
 import org.omg.CORBA.PUBLIC_MEMBER;
 
 public class lesson1 {
@@ -58,5 +59,15 @@ public class lesson1 {
 
     public static boolean isNegative(int a){
         return a < 0;
+    }
+    public static void printName(String name){
+        System.out.println("Привет " + name);
+    }
+    public static void printYear(int year){
+        if(year % 4 == 0 && year % 100 != 0 || year % 400 == 0){
+            System.out.println(year + " - год высокосный");
+        } else {
+            System.out.println(year + " - год не высокосный");
+        }
     }
 }
