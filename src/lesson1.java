@@ -67,7 +67,7 @@ public class lesson1 {
         if(year % 4 == 0 && year % 100 != 0 || year % 400 == 0){
             System.out.println(year + " - год высокосный");
         } else {
-            System.out.println(year + " - год не высокосный");
+            System.out.println(year + " - год не высокосный!!!");
         }
     }
 }
