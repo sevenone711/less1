@@ -1,3 +1,8 @@
+import com.sun.tools.javac.file.SymbolArchive;
+
+import java.lang.reflect.Array;
+import java.util.Arrays;
+
 public class homework2 {
     public static void main(String[] args){
         System.out.println("1. Задать целочисленный массив, состоящий из элементов 0 и 1.\n" +
@@ -72,6 +77,24 @@ public class homework2 {
         5. ** Задать одномерный массив и найти в нем минимальный
          и максимальный элементы (без помощи интернета);
          */
+        int[] sab = {3,5,3,2,11,4,5,2,4,8,99,111};
+        int max = 0;
+        for(int i =0;i < sab.length;i++){
+            if(sab[i]>max){
+                max = sab[i];
+
+            }
+        }
+        System.out.println("В данном массиве: " + Arrays.toString(sab));
+        System.out.println("Максимальное число в массиве: " + max);
+        for(int i =0;i < sab.length;i++){
+            if(sab[i]<max){
+                max = sab[i];
+
+            }
+        }
+        System.out.println("Минимальное число в массиве: " + max);
+
         /*
         6. ** Написать метод, в который передается не пустой одномерный целочисленный массив,
          метод должен вернуть true, если в массиве есть место, в котором сумма левой и правой части массива равны.
@@ -84,6 +107,7 @@ public class homework2 {
          при этом метод должен сместить все элементымассива на n позиций.
          Для усложнения задачи нельзя пользоваться вспомогательными массивами.
          */
+
 
 
     }
