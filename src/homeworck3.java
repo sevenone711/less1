@@ -11,7 +11,7 @@ public class homeworck3 {
 //        При каждой попытке компьютер должен сообщить больше ли
 //        указанное пользователем число чем загаданное, или меньше.
 //        После победы или проигрыша выводится запрос – «Повторить игру еще раз? 1 – да / 0 – нет»(1 – повторить, 0 – нет).
- /*
+
         System.out.println("Введите имя первого игрока");
         scanner.hasNextLine();
         String nameUser1 = scanner.nextLine();
@@ -60,7 +60,7 @@ public class homeworck3 {
         System.out.println("GameOver");
 
 
-*/
+
 
 
         //        2 * Создать массив из слов String[] words = {"apple", "orange", "lemon", "banana",
