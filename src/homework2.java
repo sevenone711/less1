@@ -70,6 +70,13 @@ public class homework2 {
              }
              System.out.println();
          }
+        for(int i = 0;i < 5;i++){
+            for(int j=0;j<5;j++){
+                arrSquare[j][i] = 1;
+                System.out.print(arrSquare[j][i]+ " ");
+            }
+            System.out.println();
+        }
          System.out.println();
 
 
@@ -108,7 +115,27 @@ public class homework2 {
          Для усложнения задачи нельзя пользоваться вспомогательными массивами.
          */
 
+        int[] arrSdvig = { 1, 2, 3, 4, 5, 6, 7 };
+        int sdvig = -22;
+        int ostatok;
+        if (sdvig> arrSdvig.length){                // проверяю сдвиг больше длины массива если д
+            ostatok = sdvig % arrSdvig.length;      //а то смотрю в итоге на сколько нужно сдвинуть
+            System.out.println("Сдвиг будет на " + ostatok + " вперед");
+        }
+        else if (sdvig<0){
+            System.out.println("Сдвиг меньше 0 :" + sdvig);
+        }
+        else{
+          ostatok = arrSdvig.length - sdvig;        //если нет то считаю куда будет сдвиг
+            System.out.println("Сюда будет сдвиг " + ostatok);
+        }
+
+
+
+
 
 
     }
+
+
 }
