@@ -1,14 +1,17 @@
+import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
 public class homeworck3 {
     public static void main (String[] args){
+        Random random = new Random();
+        Scanner scanner = new Scanner(System.in);
 //        1. Написать программу, которая загадывает случайное число от 0 до 9, и
 //        пользователю дается 3 попытки угадать это число.
 //        При каждой попытке компьютер должен сообщить больше ли
 //        указанное пользователем число чем загаданное, или меньше.
 //        После победы или проигрыша выводится запрос – «Повторить игру еще раз? 1 – да / 0 – нет»(1 – повторить, 0 – нет).
-        Scanner scanner = new Scanner(System.in);
+ /*
         System.out.println("Введите имя первого игрока");
         scanner.hasNextLine();
         String nameUser1 = scanner.nextLine();
@@ -22,7 +25,7 @@ public class homeworck3 {
             int vopros = random.nextInt(9);
             System.out.println(vopros);
 
-                int pop = 0;
+
 
 
 
@@ -41,11 +44,11 @@ public class homeworck3 {
                 }
                     else if(answer > vopros) {
                         System.out.println("Ваше число:" + answer + " больше загаданного");
-                        pop++;
+
                     }
                     else {
                         System.out.println("Ваше число:" + answer + " меньше загаданного");
-                        pop++;
+
 
                     }
                 }
@@ -57,7 +60,7 @@ public class homeworck3 {
         System.out.println("GameOver");
 
 
-
+*/
 
 
         //        2 * Создать массив из слов String[] words = {"apple", "orange", "lemon", "banana",
@@ -75,8 +78,83 @@ public class homeworck3 {
 //        str.charAt(0); - метод, вернет char, который стоит в слове str на первой позиции
 //        Играем до тех пор, пока игрок не отгадает слово
 //        Используем только маленькие буквы
+        String[] words = {"apple", "orange", "lemon", "banana","apricot", "avocado", "broccoli", "carrot", "cherry", "garlic", "grape", "melon", "leak","kiwi", "mango", "mushroom", "nut", "olive", "pea", "peanut", "pear", "pepper", "pineapple","pumpkin", "potato"};
+        int lengthWords =  words.length -1 ;
+        int numberRandomWords = random.nextInt(lengthWords);
+        int countWins = 1;
+        int cikl;
+        char displayResult;
+
+
+        String str = words[numberRandomWords];
+        char[] m = {'#'};
+
+        int count = 0;
+        for (int i =0; i<str.length();i++){
+            count++;
+        }
+
+        char[] arrWords = new char[count];
+        for(int i =0;i<count;i++){
+            arrWords[i] = str.charAt(i);
+                    }
+
+        System.out.println("Я загадал слово! Попробуйте его отгадать! Введите ваш ответ:");
+        while (countWins == 1){
+
+
+
+        scanner.hasNextLine();
+        String answer = scanner.nextLine();
+        int count2 = 0;
+        for (int i =0; i<answer.length();i++){
+            count2++;
+        }
+        if(count>count2){
+             cikl = count - count2;
+        }else if(count==count2){
+             cikl = count;
+        }
+
+        char[] answerArr = new char[count2];
+        for(int i =0;i<count2;i++){
+            answerArr[i] = answer.charAt(i);
+        }
+            if(count > count2){
+                cikl = count2;
+            } else {
+                cikl = count;
+            }
+        char[] dislplayOut = new char[count];
+        for (int i = 0;i< cikl;i++){
+            if(arrWords[i]== answerArr[i]){
+                dislplayOut[i] = arrWords[i];
+
+            }else {
+                dislplayOut[i] = m[0];
+            }
+        }
+        for(int f = 0;f< dislplayOut.length;f++){
+            System.out.print(dislplayOut[f]);
+        }
+            if(Arrays.equals(arrWords, answerArr)){
+                countWins = 0;
+                System.out.println(" Вы отгадали!!");
+            }
+        else if (countWins == 1){
+            System.out.println("#########");
+            System.out.println("Попробуйте еще раз:");
+        }
 
         }
+
+
+
+
+    }
+
+
+
 
     }
 
