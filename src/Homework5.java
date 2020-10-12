@@ -17,7 +17,7 @@ public class Homework5 {
         persArr[4] = new Person("Галышев Никита Юрьевич","Гендиректор","galish@mail.ru",19,"+79168971234",209000);
 
         for(int i = 0; i< persArr.length;i++){
-            persArr[i].infos();
+            persArr[i].printArray();
         }
 
 
